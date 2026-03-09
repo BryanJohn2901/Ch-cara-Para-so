@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chácara Paraíso do Sol | O seu refúgio paradisíaco</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#EEC432',
+                            primaryHover: '#DDBF54',
+                            bg: '#171717',
+                            surface: '#222222',
+                            light: '#F8F9FA',
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 15s linear infinite', // Animação infinita suave para o selo
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-hero {
+            background-image: linear-gradient(to bottom, rgba(23, 23, 23, 0.4) 0%, rgba(23, 23, 23, 0.8) 100%), url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .group:hover .rotate-180-hover { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-700 bg-brand-light overflow-x-hidden selection:bg-brand-primary selection:text-black">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent text-white py-4 transition-all duration-500 border-b border-transparent">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            
+            <a href="#inicio" class="z-50 relative">
+                <img src="img/Logo-Chácara-Paraíso-do-Sol-1-2.png" alt="Chácara Paraíso do Sol" class="h-20 md:h-28 lg:h-32 w-auto object-contain drop-shadow-lg transition-all duration-500 origin-left" id="nav-logo">
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-8 font-medium text-sm transition-colors duration-300 tracking-wide" id="nav-links">
+                
+                <div class="group relative py-4">
+                    <button class="flex items-center gap-1 hover:text-brand-primary transition-colors">
+                        A Chácara <i class="fas fa-chevron-down text-[10px] transition-transform duration-300 rotate-180-hover"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-56 bg-white text-gray-700 border border-gray-100 shadow-2xl rounded-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-3">
+                        <a href="#" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Nossa história</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Perguntas Frequentes</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Orgânicas</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Sustentabilidade</a>
+                    </div>
+                </div>
+
+                <div class="group relative py-4">
+                    <button class="flex items-center gap-1 hover:text-brand-primary transition-colors">
+                        Entretenimento <i class="fas fa-chevron-down text-[10px] transition-transform duration-300 rotate-180-hover"></i>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 w-[500px] bg-white text-gray-700 border border-gray-100 shadow-2xl rounded-3xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-8">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-gray-100 pb-2">Atividades</h4>
+                                <div class="space-y-2">
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Wakeboard</a>
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Paintball</a>
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Floats</a>
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Espaço Kids</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-brand-primary uppercase tracking-widest mb-4 border-b border-gray-100 pb-2">Beach | Praia</h4>
+                                <div class="space-y-2">
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Beach Tennis</a>
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Futevôlei</a>
+                                    <a href="#" class="block px-3 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Vôlei de Praia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#restaurante" class="hover:text-brand-primary transition-colors py-4">Restaurante</a>
+                <a href="#pousada" class="hover:text-brand-primary transition-colors py-4">Pousada</a>
+
+                <div class="group relative py-4">
+                    <button class="flex items-center gap-1 hover:text-brand-primary transition-colors">
+                        Eventos <i class="fas fa-chevron-down text-[10px] transition-transform duration-300 rotate-180-hover"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-64 bg-white text-gray-700 border border-gray-100 shadow-2xl rounded-2xl opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-3">
+                        <a href="#eventos" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Casamentos</a>
+                        <a href="#eventos" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Batismos</a>
+                        <a href="#eventos" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Festas e confraternizações</a>
+                        <a href="#eventos" class="block px-4 py-2 hover:bg-brand-light hover:text-brand-primary rounded-xl transition-colors">Aniversários</a>
+                    </div>
+                </div>
+
+                <a href="#contato" class="hover:text-brand-primary transition-colors py-4">Como chegar</a>
+                <a href="#contato" class="hover:text-brand-primary transition-colors py-4">Contato</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="#contato" class="bg-brand-primary text-black font-bold uppercase text-xs tracking-widest px-8 py-4 rounded-full hover:bg-white transition-all hover:-translate-y-1 shadow-[0_10px_30px_rgba(238,196,50,0.3)]">
+                    Reservar
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-white relative z-50 transition-colors duration-300">
+                <i class="fas fa-bars drop-shadow-md"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-500 overflow-y-auto lg:hidden pt-32 pb-10 px-6">
+            <div class="flex flex-col gap-6 text-lg font-medium text-brand-bg">
+                <div>
+                    <div class="border-b border-gray-100 pb-2 mb-2 font-bold font-serif text-xl">A Chácara</div>
+                    <div class="flex flex-col gap-3 pl-4 text-base text-gray-500">
+                        <a href="#" class="mobile-link">Nossa história</a>
+                        <a href="#" class="mobile-link">Perguntas Frequentes</a>
+                        <a href="#" class="mobile-link">Orgânicas</a>
+                        <a href="#" class="mobile-link">Sustentabilidade</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-b border-gray-100 pb-2 mb-2 font-bold font-serif text-xl">Entretenimento</div>
+                    <div class="flex flex-col gap-3 pl-4 text-base text-gray-500">
+                        <a href="#" class="mobile-link">Wakeboard</a>
+                        <a href="#" class="mobile-link">Paintball</a>
+                        <a href="#" class="mobile-link">Floats</a>
+                        <a href="#" class="mobile-link">Espaço Kids</a>
+                        <div class="mt-2 text-brand-primary font-bold text-sm uppercase">Beach | Praia</div>
+                        <a href="#" class="mobile-link pl-4">Beach Tennis</a>
+                        <a href="#" class="mobile-link pl-4">Futevôlei</a>
+                        <a href="#" class="mobile-link pl-4">Vôlei de Praia</a>
+                    </div>
+                </div>
+                <a href="#restaurante" class="border-b border-gray-100 pb-2 font-bold font-serif text-xl mobile-link">Restaurante</a>
+                <a href="#pousada" class="border-b border-gray-100 pb-2 font-bold font-serif text-xl mobile-link">Pousada</a>
+                <div>
+                    <div class="border-b border-gray-100 pb-2 mb-2 font-bold font-serif text-xl">Eventos</div>
+                    <div class="flex flex-col gap-3 pl-4 text-base text-gray-500">
+                        <a href="#eventos" class="mobile-link">Casamentos</a>
+                        <a href="#eventos" class="mobile-link">Batismos</a>
+                        <a href="#eventos" class="mobile-link">Festas e confraternizações</a>
+                        <a href="#eventos" class="mobile-link">Aniversários</a>
+                    </div>
+                </div>
+                <a href="#contato" class="border-b border-gray-100 pb-2 font-bold font-serif text-xl mobile-link">Como chegar</a>
+                <a href="#contato" class="border-b border-gray-100 pb-2 font-bold font-serif text-xl mobile-link">Contato</a>
+                
+                <a href="#contato" class="bg-brand-primary text-black text-center font-bold uppercase tracking-widest px-6 py-4 rounded-full mt-4 mobile-link shadow-lg">
+                    Fazer Reserva Agora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative min-h-screen flex flex-col items-center justify-center text-center bg-hero overflow-hidden">
+        
+        <div class="container mx-auto px-4 relative z-10 pt-20">
+            <span class="text-brand-primary font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-6 block drop-shadow-md">
+                O seu refúgio paradisíaco
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 drop-shadow-2xl leading-[1.1]">
+                Aproveite a Vida <br>
+                <span class="italic font-normal">&</span> Fuja da Rotina
+            </h1>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+                <a href="#contato" class="w-full sm:w-auto bg-brand-primary text-black font-bold uppercase text-sm tracking-widest px-10 py-5 rounded-full hover:bg-white transition-all hover:-translate-y-1 shadow-[0_15px_30px_rgba(238,196,50,0.4)]">
+                    Reserva da Pousada
+                </a>
+                <a href="#contato" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold uppercase text-sm tracking-widest px-10 py-5 rounded-full hover:bg-white hover:text-black transition-all hover:-translate-y-1 shadow-xl">
+                    Reserva da Chácara
+                </a>
+            </div>
+        </div>
+
+        <a href="#beneficios" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 hover:text-brand-primary transition-colors animate-bounce flex flex-col items-center gap-2 z-20">
+            <span class="text-[10px] uppercase tracking-widest">Descubra</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <section id="beneficios" class="relative z-20 bg-white py-24 md:py-32 px-6 overflow-hidden">
+        
+        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] md:text-[12vw] font-black text-gray-100 uppercase tracking-widest select-none z-0 pointer-events-none whitespace-nowrap">
+            BEM-ESTAR
+        </span>
+
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brand-bg leading-tight">
+                    Nós oferecemos <br><span class="text-brand-primary italic">diversão e bem-estar.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <div class="bg-white rounded-3xl p-10 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-50 hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-brand-primary text-2xl mb-6 border border-brand-primary/10">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-brand-bg mb-4">Entretenimento</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Muitas opções para desfrutar com amigos e Espaço Kids para os pequenos.</p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-10 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-50 hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-brand-primary text-2xl mb-6 border border-brand-primary/10">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-brand-bg mb-4">Eventos</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Festas, casamentos e confraternizações. A certeza de um momento inesquecível.</p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-10 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-50 hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-brand-primary text-2xl mb-6 border border-brand-primary/10">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-brand-bg mb-4">Restaurante</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Cardápio excepcional, vinhos selecionados e cocktails surpreendentes.</p>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-10 shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-50 hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center text-brand-primary text-2xl mb-6 border border-brand-primary/10">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-sans font-bold text-xl text-brand-bg mb-4">Sustentabilidade</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">A garantia de colhermos um futuro fértil e consciente com nossas ideias ecológicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lazer" class="py-24 md:py-32 bg-brand-light relative overflow-hidden">
+        
+        <span class="absolute top-10 -left-10 text-[10vw] font-black text-white uppercase tracking-widest select-none z-0 pointer-events-none drop-shadow-sm">
+            NATUREZA
+        </span>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <div class="order-2 lg:order-1">
+                    <span class="text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] block mb-4">Diversão Garantida</span>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brand-bg leading-tight mb-8">
+                        O lazer é muito mais importante do que você imagina
+                    </h2>
+                    <p class="text-gray-500 mb-6 leading-relaxed text-lg">Quando incluído corretamente na sua rotina, o lazer é capaz de ajudar em diversos sentidos, inclusive na prevenção e no bem-estar físico e mental.</p>
+                    <p class="text-gray-500 mb-10 leading-relaxed">A <strong class="text-brand-bg">Chácara Paraíso do Sol</strong> não economizou na construção de suas estruturas. Utilizamos materiais de alta qualidade para que nossos visitantes tenham um local luxuoso, seguro e extremamente aconchegante.</p>
+                    <a href="#eventos" class="inline-block bg-transparent border-2 border-brand-bg text-brand-bg font-bold uppercase text-xs tracking-widest px-8 py-4 rounded-full hover:bg-brand-bg hover:text-white transition-all shadow-sm">
+                        Conheça o Espaço
+                    </a>
+                </div>
+
+                <div class="order-1 lg:order-2 relative h-[500px] md:h-[600px] w-full">
+                    <img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=800&auto=format&fit=crop" alt="Piscina" class="absolute top-0 right-0 w-3/4 h-[400px] object-cover rounded-[2rem] shadow-2xl z-10">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=600&auto=format&fit=crop" alt="Lazer" class="absolute bottom-0 left-0 w-3/5 h-[350px] object-cover rounded-[2rem] shadow-2xl border-8 border-brand-light z-20">
+                    
+                    <div class="absolute -z-10 top-20 -right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl"></div>
+
+                    <img src="img/Palavras-Rotatórias.png" alt="Selo Rotatório" class="absolute -bottom-10 -left-10 w-32 h-32 md:w-40 md:h-40 animate-spin-slow opacity-90 z-30 select-none pointer-events-none drop-shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eventos" class="py-24 md:py-32 bg-white relative overflow-hidden">
+        
+        <span class="absolute top-1/2 -right-40 -translate-y-1/2 rotate-90 text-[12vw] font-black text-gray-100 uppercase tracking-widest select-none z-0 pointer-events-none whitespace-nowrap">
+            CELEBRAÇÃO
+        </span>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-24 md:mb-32">
+                <span class="text-brand-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Eventos Exclusivos</span>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brand-bg leading-tight">
+                    Infraestrutura completa para momentos inesquecíveis
+                </h2>
+            </div>
+
+            <div class="space-y-32">
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
+                    <div class="w-full lg:w-1/2 relative group">
+                        <div class="absolute inset-0 bg-brand-primary/20 translate-x-6 translate-y-6 rounded-[2.5rem] transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
+                        <img src="img/asset 29.jpeg" alt="Casamentos" class="relative z-10 w-full h-[450px] object-cover rounded-[2.5rem] shadow-xl">
+                    </div>
+                    
+                    <img src="img/Palavras-Rotatórias.png" alt="Selo" class="absolute -top-10 -right-10 w-32 h-32 animate-spin-slow opacity-90 z-20 select-none pointer-events-none drop-shadow-lg lg:-right-16">
+                    
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] block mb-4">O Dia Perfeito</span>
+                        <h3 class="font-sans text-4xl md:text-5xl font-bold text-brand-bg mb-6 tracking-tight">Seu Casamento<br>do Seu Jeito</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed text-lg">Já pensou em se casar em um lugar de arrancar suspiros? Aqui o pôr do sol é especial e faz com que tudo seja ainda mais inesquecível.</p>
+                        <p class="text-gray-500 mb-10 leading-relaxed">Com um ambiente acolhedor e cercado de natureza, somos a alternativa charmosa que oferece a possibility de realizar a cerimônia e a festa no mesmo local.</p>
+                        <a href="#contato" class="inline-flex items-center gap-3 bg-brand-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-black transition-colors shadow-lg">
+                            Faça Sua Reserva
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                    <div class="w-full lg:w-1/2 relative group">
+                        <div class="absolute inset-0 bg-gray-200 -translate-x-6 translate-y-6 rounded-[2.5rem] transition-transform group-hover:-translate-x-4 group-hover:translate-y-4"></div>
+                        <img src="img/asset 28.jpeg" alt="Festas" class="relative z-10 w-full h-[450px] object-cover rounded-[2.5rem] shadow-xl">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] block mb-4">Seu evento com tudo para arrasar</span>
+                        <h3 class="font-sans text-4xl md:text-5xl font-bold text-brand-bg mb-6 tracking-tight">Festas &<br>Confraternizações</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed text-lg">Venha brindar seus melhores momentos aqui na Chácara Paraíso do Sol. Festas de formaturas, confraternizações de empresas e tudo mais que a sua imaginação for capaz de idealizar.</p>
+                        <p class="text-gray-500 mb-10 leading-relaxed">Com uma localização privilegiada, amplo e belo Salão de Festas e excelente infraestrutura para buffets, a chácara destaca-se por sua beleza e requinte.</p>
+                        <a href="#contato" class="inline-flex items-center gap-3 bg-brand-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-black transition-colors shadow-lg">
+                            Faça Sua Reserva
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
+                    <div class="w-full lg:w-1/2 relative group">
+                        <div class="absolute inset-0 bg-brand-primary/20 translate-x-6 translate-y-6 rounded-[2.5rem] transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
+                        <img src="img/asset 27.jpeg" alt="Aniversário" class="relative z-10 w-full h-[450px] object-cover rounded-[2.5rem] shadow-xl">
+                    </div>
+                    
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] block mb-4">Comemore a vida do melhor jeito</span>
+                        <h3 class="font-sans text-4xl md:text-5xl font-bold text-brand-bg mb-6 tracking-tight">O seu dia <br>ainda mais especial</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed text-lg">O melhor da vida é celebrar os grandes momentos e o aniversário talvez seja a melhor data para isso. Festeje o dia mais especial do ano e torne a sua comemoração inesquecível!</p>
+                        <p class="text-gray-500 mb-10 leading-relaxed">Temos o pacote exato pro seu evento! As melhores cervejas, drinks, um cardápio delicioso e uma trilha sonora incrível vão fazer da sua festa a melhor de todos os tempos.</p>
+                        <a href="#contato" class="inline-flex items-center gap-3 bg-brand-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-black transition-colors shadow-lg">
+                            Faça Sua Reserva
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                    <div class="w-full lg:w-1/2 relative group lg:-mt-20"> <div class="absolute inset-0 bg-gray-200 -translate-x-6 translate-y-6 rounded-[2.5rem] transition-transform group-hover:-translate-x-4 group-hover:translate-y-4"></div>
+                        <img src="img/asset 30.png" alt="Batismos" class="relative z-10 w-full h-[450px] object-cover rounded-[2.5rem] shadow-xl">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-brand-primary text-[10px] font-bold uppercase tracking-[0.2em] block mb-4">A luz de Deus acende no seu coração</span>
+                        <h3 class="font-sans text-4xl md:text-5xl font-bold text-brand-bg mb-6 tracking-tight">Bem-vindo ao<br>mundo de Deus!</h3>
+                        <p class="text-gray-500 mb-6 leading-relaxed text-lg">O batismo é um ritual de passagem religioso. Celebre essa data tão especial em um ambiente acolhedor e de muita paz e tranquilidade aqui na Chácara Paraíso do Sol.</p>
+                        <a href="#contato" class="inline-flex items-center gap-3 bg-brand-bg text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-black transition-colors shadow-lg mt-4">
+                            Faça Sua Reserva
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 md:py-32 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
+        
+        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[14vw] md:text-[12vw] font-sans font-black text-gray-50 uppercase tracking-widest select-none z-0 pointer-events-none whitespace-nowrap overflow-hidden">
+            INSTAGRAM
+        </span>
+        
+        <div class="relative z-10 text-center px-4">
+            <h2 class="font-sans text-4xl md:text-5xl font-bold text-brand-bg mb-6 tracking-tight">Siga Nosso Instagram</h2>
+            <p class="text-gray-500 text-lg">Fique por dentro de todas as novidades da Chácara Paraíso do Sol</p>
+            
+            <a href="#" class="mt-10 inline-flex items-center gap-3 text-brand-bg border-b-2 border-brand-primary pb-1 font-bold uppercase text-sm tracking-widest hover:text-brand-primary transition-colors">
+                Acessar Perfil <i class="fab fa-instagram text-xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-brand-bg text-gray-400 pt-24 md:pt-32 pb-10 border-t-[8px] border-[#1B1B1B] relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                
+                <div class="space-y-6">
+                    <img src="img/Logo-Chácara-Paraíso-do-Sol-1-2.png" alt="Paraíso do Sol" class="h-16 w-auto opacity-90 mb-4">
+                    <p class="text-sm leading-relaxed max-w-sm">O seu refúgio paradisíaco para momentos de paz, diversão e celebrações inesquecíveis.</p>
+                    <div class="text-xs space-y-1 text-gray-500 pt-2">
+                        <p>Chácara: CNPJ 43.494.406/0001-80</p>
+                        <p>Pousada: CNPJ 55.265.290/0001-97</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif font-bold text-xl mb-6">Navegação</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#inicio" class="hover:text-brand-primary transition-colors">Início</a></li>
+                        <li><a href="#lazer" class="hover:text-brand-primary transition-colors">A Chácara</a></li>
+                        <li><a href="#entretenimento" class="hover:text-brand-primary transition-colors">Entretenimento</a></li>
+                        <li><a href="#eventos" class="hover:text-brand-primary transition-colors">Eventos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif font-bold text-xl mb-6">Localização</h4>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Estr. do Galarda, 818-1702<br>
+                        Jardim Santa Nely<br>
+                        Campo Largo – PR
+                    </p>
+                    <a href="#" class="text-brand-primary hover:text-white transition-colors text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i> Ver no Mapa
+                    </a>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif font-bold text-xl mb-6">Atendimento</h4>
+                    <a href="https://wa.me/5541984822828" target="_blank" class="inline-flex items-center gap-3 text-white text-xl font-medium hover:text-brand-primary transition-colors mb-2">
+                        <i class="fab fa-whatsapp text-brand-primary text-2xl"></i> (41) 98482-2828
+                    </a>
+                    <p class="text-sm mb-8">contato@chacaraparaisodosol.com.br</p>
+                    
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary hover:text-black transition-all">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary hover:text-black transition-all">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-wide text-gray-600">
+                <p>&copy; 2026 Chácara Paraíso do Sol. Todos os direitos reservados.</p>
+                <p class="mt-4 md:mt-0">Desenvolvido com sofisticação.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.remove('bg-transparent', 'py-4', 'border-transparent');
+                navbar.classList.add('bg-[#1B1B1B]', 'shadow-lg', 'py-2', 'border-white/5');
+                
+                navLogo.classList.remove('h-20', 'md:h-28', 'lg:h-32');
+                navLogo.classList.add('h-14', 'md:h-16', 'lg:h-20');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4', 'border-transparent');
+                navbar.classList.remove('bg-[#1B1B1B]', 'shadow-lg', 'py-2', 'border-white/5');
+                
+                navLogo.classList.add('h-20', 'md:h-28', 'lg:h-32');
+                navLogo.classList.remove('h-14', 'md:h-16', 'lg:h-20');
+            }
+        });
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+        const mobileLinksElements = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+            
+            if(menu.classList.contains('translate-x-full')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileBtn.classList.remove('text-brand-bg');
+                mobileBtn.classList.add('text-white');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                mobileBtn.classList.remove('text-white');
+                mobileBtn.classList.add('text-brand-bg');
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+
+        mobileLinksElements.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body>
+</html>
