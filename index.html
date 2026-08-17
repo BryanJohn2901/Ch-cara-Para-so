@@ -15,6 +15,16 @@
     <script>
         tailwind.config = {
             theme: {
+                container: {
+                    center: true,
+                    screens: {
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1300px',
+                        '2xl': '1300px',
+                    }
+                },
                 extend: {
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -201,8 +211,15 @@
         </a>
     </section>
 
-    <div class="w-full block">
-        <img src="img/WhatsApp Image 2026-03-09 at 8.21.50 AM.jpeg" alt="Chácara Paraíso do Sol" class="w-full h-auto block object-cover object-center">
+    <div id="banner-carousel" class="relative w-full overflow-hidden">
+        <div class="relative w-full">
+            <img src="img/ParaisoSol-Banner-PlantaeRaiz-.png" alt="Chácara Paraíso do Sol" class="banner-slide w-full h-auto block object-cover object-center opacity-100 transition-opacity duration-1000 ease-in-out">
+            <img src="img/banner-turmadosol.png" alt="Turma do Sol" class="banner-slide absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000 ease-in-out">
+        </div>
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            <button type="button" class="banner-dot w-2.5 h-2.5 rounded-full bg-white transition-all duration-300" data-index="0" aria-label="Banner 1"></button>
+            <button type="button" class="banner-dot w-2.5 h-2.5 rounded-full bg-white/50 transition-all duration-300" data-index="1" aria-label="Banner 2"></button>
+        </div>
     </div>
 
     <section id="beneficios" class="relative z-20 bg-white py-24 md:py-32 px-6 overflow-hidden">
@@ -516,6 +533,38 @@
         mobileLinksElements.forEach(link => {
             link.addEventListener('click', toggleMenu);
         });
+
+        const bannerSlides = document.querySelectorAll('.banner-slide');
+        const bannerDots = document.querySelectorAll('.banner-dot');
+        let bannerIndex = 0;
+
+        function showBanner(index) {
+            bannerSlides.forEach((slide, i) => {
+                slide.classList.toggle('opacity-100', i === index);
+                slide.classList.toggle('opacity-0', i !== index);
+            });
+            bannerDots.forEach((dot, i) => {
+                dot.classList.toggle('bg-white', i === index);
+                dot.classList.toggle('bg-white/50', i !== index);
+            });
+            bannerIndex = index;
+        }
+
+        function nextBanner() {
+            showBanner((bannerIndex + 1) % bannerSlides.length);
+        }
+
+        if (bannerSlides.length > 1) {
+            let bannerInterval = setInterval(nextBanner, 5000);
+
+            bannerDots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(bannerInterval);
+                    showBanner(parseInt(dot.dataset.index, 10));
+                    bannerInterval = setInterval(nextBanner, 5000);
+                });
+            });
+        }
     </script>
 </body>
 </html>
