@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada | Chácara Paraíso do Sol</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#171717">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#171717;color:#fff;font-family:'Montserrat',sans-serif;min-height:100vh;
+             display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+        .sol{width:88px;height:88px;border-radius:50%;background:#EEC432;margin:0 auto 8px;
+             position:relative;overflow:hidden}
+        .sol::after{content:"";position:absolute;left:-10%;right:-10%;bottom:0;height:32%;background:#171717}
+        h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.2rem);margin:18px 0 10px}
+        p{color:#9ca3af;max-width:34rem;margin:0 auto 34px;line-height:1.7}
+        .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+        a.btn{display:inline-block;text-decoration:none;font-weight:700;text-transform:uppercase;
+              font-size:.72rem;letter-spacing:.14em;padding:18px 36px;border-radius:999px;transition:.2s}
+        a.principal{background:#EEC432;color:#000}
+        a.principal:hover{background:#fff}
+        a.fantasma{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.08)}
+        a.fantasma:hover{background:#fff;color:#000}
+        .rotulo{font-size:.7rem;letter-spacing:.3em;color:#EEC432;text-transform:uppercase;font-weight:700}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="sol" aria-hidden="true"></div>
+        <span class="rotulo">Erro 404</span>
+        <h1>Esse caminho não leva ao paraíso</h1>
+        <p>A página que você procurou não existe ou mudou de lugar. Volte ao início ou fale direto com a nossa equipe.</p>
+        <div class="btns">
+            <a class="btn principal" href="/">Voltar ao início</a>
+            <a class="btn fantasma" href="https://wa.me/5541984822828?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ch%C3%A1cara%20Para%C3%ADso%20do%20Sol%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+        </div>
+    </main>
+</body>
+</html>
